@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'listings',
     'celery',
+    'payments'
 ]
 
 MIDDLEWARE = [
@@ -118,4 +119,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CELERY_BROKER_URL = env('CELERY_BROKER_URL', default='amqp://robel:123@localhost:5672/development')
 
-
+CHAPA_PUBLIC_KEY = env('CHAPA_PUBLIC_KEY')
+CHAPA_PRIVATE_KEY = env('CHAPA_PRIVATE_KEY')
+CHAPA_CALLBACK_URL = env('CHAPA_CALLBACK_URL')
+CHAPA_RETURN_URL = env('CHAPA_RETURN_URL')
